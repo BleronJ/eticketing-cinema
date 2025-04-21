@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ETicketing Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="login-page">
+    
+    <nav class="navbar">
+        <div class="navbar-logo">ETicketing Cinema</div>
+        <div class="navbar-menu">
+            <a href="films.html">Films</a>
+            <a href="events.html">Events</a>
+            <a href="cinemas.html">Cinemas</a>
+            <a href="getroom.html">Get a Free Room</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="navbar-actions">
+            <a href="register.html" class="register">Register</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Login to Your Account</h1>
+        <form action="dashboard.html" method="POST" class="login-form" id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="login-actions">
+                <button type="submit" class="login-btn">Login</button>
+                <a class="forgot-password">Forgot Password?</a>
+            </div>
+            <div id="loginMessage" style="display:none; color: green; font-weight: bold; margin-top: 20px;">
+                Login Successful!
+            </div>
+    
+            
+            <div style="margin-top: 20px;">
+                <p style="color: #007bff;">Don't have an account? <a href="register.html">Register here</a></p>
+            </div>
+        </main>
+
+        </form>
+    </main>
+
+    
+    <footer class="footer">
+        <p>&copy; 2024 ETicketing Cinema | All Rights Reserved</p>
+    </footer>
+
+</body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (email === "" || password === "") {
+            alert("Please fill in both fields.");
+        } else {
+           
+            document.getElementById('loginMessage').style.display = 'block';
+        }
+    });
+</script>
+</html>

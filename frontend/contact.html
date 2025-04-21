@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ETicketing Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/Icon.jpg" type="image/jpg">
+    <style>
+        
+        .contact-container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .contact-form {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #fff;
+            font-size: 14px;
+        }
+        .contact-info {
+            margin-top: 20px;
+            background-color: #1a1a1a;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .contact-info h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .contact-info a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        footer.footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .faq-section {
+            margin: 20px 0;
+        }
+        .faq-item {
+            background-color: #292929;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .faq-item h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #444;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+        }
+        .faq-content {
+            display: none;
+            padding: 10px;
+            font-size: 14px;
+            color: #ddd;
+        }
+        .faq-item.active .faq-content {
+            display: block;
+        }
+        .submit-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .canvas-background {
+            position: relative;
+            height: 500px;
+            z-index: -1;
+        }
+    canvas#contactCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">ETicketing Cinema</div>
+        <div class="navbar-menu">
+            <a href="films.html">Movies</a>
+            <a href="events.html">Events</a>
+            <a href="cinemas.html">Cinemas</a>
+            <a href="getroom.html">Get a Free Room</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </div>
+        <div class="navbar-actions">
+            <a href="login.html" class="login">Login</a>
+            <a href="register.html" class="register">Register</a>
+        </div>
+    </nav>
+
+    <h1 style="text-align: center; margin: 20px 0;">Contact Us</h1>
+
+    <div class="canvas-background">
+        <canvas id="contactCanvas" width="1000" height="500"></canvas>
+    </div>
+    <div class="contact-container">
+   
+    
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <div class="contact-info">
+                <h2>Our Address</h2>
+                <p>Prishtine, Prizren, Lipjan</p>
+
+                <h2>Phone</h2>
+                <p>+38843555444</p>
+
+                <h2>Email</h2>
+                <p><a href="mailto:info@eticketingcinema.com">info@eticketingcinema.com</a></p>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <div class="faq-section">
+        <div class="faq-item">
+            <h3>General</h3>
+            <div class="faq-content">Feel free to reach out to us through the contact form above. We're here to assist with any questions or concerns. We aim to respond promptly within 24 hours.</div>
+        </div>
+        <div class="faq-item">
+            <h3>Registration & Membership</h3>
+            <div class="faq-content">For inquiries about registration or membership benefits, please contact us using the form above. Our team is ready to provide detailed assistance and guide you through the process.</div>
+        </div>
+        <div class="faq-item">
+            <h3>Cinema Program</h3>
+            <div class="faq-content">Stay updated on the latest cinema schedules, events, and featured films with our comprehensive program guide.</div>
+        </div>
+        <div class="faq-item">
+            <h3>Tickets</h3>
+            <div class="faq-content">Learn about ticket pricing, discounts, and how to book tickets for upcoming shows and events.</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 ETicketing Cinema | All Rights Reserved</p>
+    </footer>
+    
+    <script>
+   
+    const canvas = document.getElementById('contactCanvas');
+    const ctx = canvas.getContext('2d');
+
+    
+    let particles = [];
+    const maxParticles = 100;
+
+    function createParticle() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 5 + 1,
+            color: `rgba(255, 255, 255, ${Math.random()})`,
+            dx: (Math.random() - 0.5) * 2,
+            dy: (Math.random() - 0.5) * 2,
+        };
+    }
+
+    function drawParticle(particle) {
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function updateParticle(particle) {
+        particle.x += particle.dx;
+        particle.y += particle.dy;
+
+    
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((particle) => {
+            drawParticle(particle);
+            updateParticle(particle);
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    
+    for (let i = 0; i < maxParticles; i++) {
+        particles.push(createParticle());
+    }
+
+    animate();
+
+
+    document.querySelectorAll('.faq-item h3').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>

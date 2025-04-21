@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ETicketing Cinema</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    
+</head>
+<body class="login-page">
+
+    <nav class="navbar">
+        <div class="navbar-logo">ETicketing Cinema</div>
+        <div class="navbar-menu">
+            <a href="films.html">Movies</a>
+            <a href="events.html">Events</a>
+            <a href="cinemas.html">Cinemas</a>
+            <a href="getroom.html">Get a Free Room</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="navbar-actions">
+            <a href="login.html" class="login">Login</a>
+        </div>
+    </nav>
+
+
+    <main>
+        <h1>Create Your Account</h1>
+        <form action="dashboard.html" method="POST" class="register-form" id="registerForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <div class="register-actions">
+                <button type="submit" class="register-btn">Register</button>
+                <a href="login.html" class="login-link">Already have an account? Login</a>
+            </div>
+        </form>
+            <div id="successMessage" style="display:none; color: green; font-weight: bold; margin-top: 20px;">
+                Registered Successfully!
+            </div>
+    </main>
+    </main>
+
+ 
+    <footer>
+        <p>&copy; 2024 ETicketing Cinema | All Rights Reserved</p>
+    </footer>
+    <script>
+        
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+           
+            if (username === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("Please fill in all fields.");
+            } else if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+            } else {
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
