@@ -35,7 +35,7 @@ router.get('/movies/:id', (req, res) => {
   });
 });
 
-// Route to create a new movie
+
 router.post('/movies', (req, res) => {
   const { title, director, release_year, genre } = req.body;
   const query = 'INSERT INTO movies (title, director, release_year, genre) VALUES (?, ?, ?, ?)';
@@ -48,7 +48,6 @@ router.post('/movies', (req, res) => {
   });
 });
 
-// Route to update a movie
 router.put('/movies/:id', (req, res) => {
   const movieId = req.params.id;
   const { title, director, release_year, genre } = req.body;

@@ -10,20 +10,12 @@
     <link rel="icon" href="./img/Icon.jpg" type="image/jpg">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">ETicketing Cinema</div>
-        <div class="navbar-menu">
-            <a href="films.html">Movies</a>
-            <a href="events.html">Events</a>
-            <a href="cinemas.html">Cinemas</a>
-            <a href="getroom.html">Get a Free Room</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="navbar-actions">
-            <a href="login.html" class="login">Login</a>
-            <a href="register.html" class="register">Register</a>
-        </div>
-    </nav>
+    <script src="js/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNavbar();
+        });
+    </script>
     <div class="search-container">
         <input type="text" id="movieSearch" placeholder="Search for movies..." />
         <button id="searchButton">

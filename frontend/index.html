@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETicketing Cinema</title>
+    <title>Home - ETicketing Cinema</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="./img/Icon.jpg" type="image/jpg">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">ETicketing Cinema</div>
-        <div class="navbar-menu">
-            <a href="films.html">Movies</a>
-            <a href="events.html">Events</a>
-            <a href="cinemas.html">Cinemas</a>
-            <a href="getroom.html">Get a Free Room</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="navbar-actions">
-            <a href="login.html" class="login">Login</a>
-            <a href="register.html" class="register">Register</a>
-        </div>
-    </nav>
-    <h1 style="text-align: center;">Welcome to ETicketing Cinema!</h1>
+    <script src="js/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNavbar();
+        });
+    </script>
+
+    <!-- Rest of your index.html content -->
+    
+    <footer class="footer">
+        <p>&copy; 2024 ETicketing Cinema | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
 
